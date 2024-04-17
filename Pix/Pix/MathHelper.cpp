@@ -38,14 +38,14 @@ float MatheHelper::Dot(Vector2& a, Vector2& b)
 
 float MatheHelper::Dot(Vector3& a, Vector3& b)
 {
-	return a.x * b.x + a.y + b.y;
+	return a.x * b.x + a.y + b.y + a.z + b.z;
 }
 
 Vector3 MatheHelper::Cross(Vector3& a, Vector3& b)
 {
 	return {
-		a.y * b.z -a.z * b.y,
-		a.z * b.x -a.x * b.z,
-		a.x * b.y -a.y * b.x
+		a.y * b.z - a.z * b.y,
+		a.z * b.x - a.x * b.z,
+		a.x * b.y - a.y * b.x
 	};
 }
