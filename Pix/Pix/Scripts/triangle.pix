@@ -1,0 +1,11 @@
+BeginDraw(triangle)
+
+AddVertex(1,100,4,0.5,1)
+
+
+AddVertex(2,170,4,0.5,1)
+
+
+AddVertex(70,200,4,0.5,1)
+
+EndDraw()

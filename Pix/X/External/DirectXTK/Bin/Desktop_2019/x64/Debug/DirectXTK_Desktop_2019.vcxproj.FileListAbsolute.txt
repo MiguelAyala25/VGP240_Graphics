@@ -4,3 +4,4 @@ C:\Users\LCV2242930\Downloads\Pix\X\External\DirectXTK\Bin\Desktop_2019\x64\Debu
 C:\Users\LCV2242930\Downloads\VGP240\Pix\X\External\DirectXTK\Bin\Desktop_2019\x64\Debug\DirectXTK.lib
 C:\Users\LCV2242930\Downloads\VGP240_Graphics\Pix\X\External\DirectXTK\Bin\Desktop_2019\x64\Debug\DirectXTK.lib
 C:\Users\tlacu\Desktop\GameDev\School\C++\VGP240_Graphics\Pix\X\External\DirectXTK\Bin\Desktop_2019\x64\Debug\DirectXTK.lib
+C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\X\External\DirectXTK\Bin\Desktop_2019\x64\Debug\DirectXTK.lib

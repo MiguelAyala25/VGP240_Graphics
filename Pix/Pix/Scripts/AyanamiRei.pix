@@ -1,4 +1,4 @@
-SetResolution(30,60, 15, true)
+SetResolution(30,60, 15)
 
 
 //outline
@@ -636,6 +636,7 @@ SetColor(0.549, 0, 0)
 DrawPixel(15,15)
 
 DrawPixel(18,15)
+
 
 
 

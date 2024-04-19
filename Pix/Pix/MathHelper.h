@@ -5,6 +5,8 @@
 
 class MatheHelper
 {
+public:
+
 	static float MagnitudeSquared(Vector2& v);
 	static float MagnitudeSquared(Vector3& v);
 	static float Magnitude(Vector2& v);
@@ -14,5 +16,6 @@ class MatheHelper
 	static float Dot(Vector2 & a, Vector2& b);
 	static float Dot(Vector3 & a, Vector3& b);
 	static Vector3 Cross(Vector3 &a, Vector3& b);
+	static float Lerp(float a, float b, float t);
 
 };

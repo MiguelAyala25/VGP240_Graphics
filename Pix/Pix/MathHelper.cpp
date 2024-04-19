@@ -49,3 +49,8 @@ Vector3 MatheHelper::Cross(Vector3& a, Vector3& b)
 		a.x * b.y - a.y * b.x
 	};
 }
+
+float MatheHelper::Lerp(float a, float b, float t)
+{
+	return a + (b - a) * t;
+}
