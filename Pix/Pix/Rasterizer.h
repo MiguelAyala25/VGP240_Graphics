@@ -15,7 +15,6 @@ class Rasterizer
 public:
 	static Rasterizer* Get();
 
-public:
 	void SetColor(X::Color color);
 	void SetFillMode(FillMode fillMode);
 	void DrawPoint(int x, int y);
@@ -25,8 +24,10 @@ public:
 	void DrawTriangle(const Vertex& v0, const Vertex& v1, const Vertex& v2);
 
 private:
-	X::Color mColor = X::Colors::White;
 
+	void DrawFilledTriangle(const Vertex& v0, const Vertex& v1, const Vertex& v2);
+
+	X::Color mColor = X::Colors::White;
 	FillMode mFillMode = FillMode::WireFrame;
 
 };

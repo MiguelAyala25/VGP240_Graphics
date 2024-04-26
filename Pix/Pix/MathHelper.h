@@ -6,6 +6,8 @@
 class MatheHelper
 {
 public:
+	static bool checkEqual(float a, float b);
+
 
 	static float MagnitudeSquared(Vector2& v);
 	static float MagnitudeSquared(Vector3& v);

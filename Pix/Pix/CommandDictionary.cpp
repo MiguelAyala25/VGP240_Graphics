@@ -7,6 +7,7 @@
 #include "CmdBeginDraw.h"
 #include "CmdEndDraw.h"
 #include "CmdAddVertex.h"
+#include "cmdSetFillmode.h"
 
 CommandDictionary* CommandDictionary::Get()
 {
@@ -32,6 +33,7 @@ CommandDictionary::CommandDictionary()
 	RegisterCommand<CmdBeginDraw>();
 	RegisterCommand<CmdEndDraw>();
 	RegisterCommand<CmdAddVertex>();
+	RegisterCommand<CmdSetFillMode>();
 
 
 }
