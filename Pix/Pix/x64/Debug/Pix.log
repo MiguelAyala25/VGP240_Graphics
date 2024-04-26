@@ -1,7 +1,2 @@
-﻿  Rasterizer.cpp
-C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\Pix\Rasterizer.cpp(56,16): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\Pix\Rasterizer.cpp(69,36): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\Pix\Rasterizer.cpp(70,34): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\Pix\Rasterizer.cpp(74,36): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\Pix\Rasterizer.cpp(75,34): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+﻿  CmdShowViewPort.cpp
   Pix.vcxproj -> C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\x64\Debug\Pix.exe

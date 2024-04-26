@@ -5,6 +5,8 @@ C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\Pix\CmdEndDraw.cpp;C:\U
 C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\Pix\CmdSetColor.cpp;C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\Pix\x64\Debug\CmdSetColor.obj
 C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\Pix\cmdSetFillmode.cpp;C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\Pix\x64\Debug\cmdSetFillmode.obj
 C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\Pix\CmdSetResolution.cpp;C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\Pix\x64\Debug\CmdSetResolution.obj
+C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\Pix\cmdSetViewPort.cpp;C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\Pix\x64\Debug\cmdSetViewPort.obj
+C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\Pix\CmdShowViewPort.cpp;C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\Pix\x64\Debug\CmdShowViewPort.obj
 C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\Pix\CmdVarFloat.cpp;C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\Pix\x64\Debug\CmdVarFloat.obj
 C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\Pix\CommandDictionary.cpp;C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\Pix\x64\Debug\CommandDictionary.obj
 C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\Pix\Graphics.cpp;C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\Pix\x64\Debug\Graphics.obj

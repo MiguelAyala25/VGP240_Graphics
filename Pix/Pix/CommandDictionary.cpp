@@ -8,6 +8,9 @@
 #include "CmdEndDraw.h"
 #include "CmdAddVertex.h"
 #include "cmdSetFillmode.h"
+#include "cmdSetViewPort.h"
+#include "CmdShowViewPort.h"
+#include "cmdSetClipping.h"
 
 CommandDictionary* CommandDictionary::Get()
 {
@@ -21,6 +24,7 @@ CommandDictionary::CommandDictionary()
 
 	// Setting commands
 	RegisterCommand<CmdSetResolution>();
+	RegisterCommand<CmdSetClipping>();
 
 	// Variable commands
 	RegisterCommand<CmdVarFloat>();
@@ -34,7 +38,8 @@ CommandDictionary::CommandDictionary()
 	RegisterCommand<CmdEndDraw>();
 	RegisterCommand<CmdAddVertex>();
 	RegisterCommand<CmdSetFillMode>();
-
+	RegisterCommand<CmdSetViewPort>();
+	RegisterCommand<CmdShowtViewPort>();
 
 }
 

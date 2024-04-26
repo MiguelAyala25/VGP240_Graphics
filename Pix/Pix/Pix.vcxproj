@@ -178,6 +178,8 @@
     <ClCompile Include="CmdSetColor.cpp" />
     <ClCompile Include="cmdSetFillmode.cpp" />
     <ClCompile Include="CmdSetResolution.cpp" />
+    <ClCompile Include="cmdSetViewPort.cpp" />
+    <ClCompile Include="CmdShowViewPort.cpp" />
     <ClCompile Include="CmdVarFloat.cpp" />
     <ClCompile Include="CommandDictionary.cpp" />
     <ClCompile Include="Graphics.cpp" />
@@ -204,6 +206,8 @@
     <ClInclude Include="CmdSetColor.h" />
     <ClInclude Include="cmdSetFillmode.h" />
     <ClInclude Include="CmdSetResolution.h" />
+    <ClInclude Include="cmdSetViewPort.h" />
+    <ClInclude Include="CmdShowViewPort.h" />
     <ClInclude Include="CmdVarFloat.h" />
     <ClInclude Include="Command.h" />
     <ClInclude Include="CommandDictionary.h" />

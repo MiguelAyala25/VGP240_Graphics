@@ -13,7 +13,7 @@ class PrimitivesManager
 {
 public:
 	static PrimitivesManager* Get();
-
+public:
 	~PrimitivesManager();
 
 	bool BeguinDraw(Topology topology);

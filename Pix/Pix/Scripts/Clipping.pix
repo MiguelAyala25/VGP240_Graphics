@@ -1,0 +1,25 @@
+SetResolution(50,50,10,true)
+
+float $x = 5
+float $y = 5
+
+SetViewPort($x,$y,40,40)
+ShowViewPort(true)
+
+BeginDraw(triangle)
+SetFillMode(solid)
+
+AddVertex(1,10,4,0.1,0)
+
+
+AddVertex(2,17,4,0,1)
+
+
+AddVertex(47,20,4,1,0)
+
+EndDraw()
+
+
+
+
+
