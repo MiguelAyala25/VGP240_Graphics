@@ -1,8 +1,5 @@
-
 #pragma once
-
 #include "Command.h"
-
 class CmdSetClipping : public Command
 {
 public:
@@ -14,11 +11,9 @@ public:
 	const char* GetDescription() override
 	{
 		return
-			"SetResolution(width, height, <pixelSize>, <showGrid>)\n"
+			"SetClipping(clip)\n"
 			"\n"
-			"- Sets the render view resolution.\n"
-			"- Optional: Set pixel size, default = 1.\n"
-			"- Optional: Show grid (true or false) if pixel size is > 1.\n";
+			"- Enables Clipping.\n";
 	}
 
 	bool Execute(const std::vector<std::string>& params) override;
