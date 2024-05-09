@@ -11,9 +11,9 @@ public:
 	const char* GetDescription() override
 	{
 		return
-			"SetClipping(clip)\n"
+			"SetClipping(<clip>)\n"
 			"\n"
-			"- Enables Clipping.\n";
+			"- Sets Clipping\n";
 	}
 
 	bool Execute(const std::vector<std::string>& params) override;

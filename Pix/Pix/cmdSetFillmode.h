@@ -1,6 +1,4 @@
-
 #pragma once
-
 #include "Command.h"
 
 class CmdSetFillMode : public Command
@@ -14,11 +12,10 @@ public:
 	const char* GetDescription() override
 	{
 		return
-			"SetFIllMode(<fillmode>)\n"
+			"SetColor(<fillmode>)\n"
 			"\n"
-			"- Sets fillmode to read vertices (wireframe, filled)";
+			"-Sets the fillmode to read between vertices (wireframe and filled).";
 	}
 
 	bool Execute(const std::vector<std::string>& params) override;
 };
-

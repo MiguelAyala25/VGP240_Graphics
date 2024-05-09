@@ -1,30 +1,30 @@
-#include "cmdSetFillmode.h"
+#include "CmdSetFillMode.h"
 #include "Rasterizer.h"
 
-bool CmdSetFillMode::Execute(const std::vector<std::string>& params)
+bool CmdSetFillMode::Execute(const
+	std::vector<std::string>& params)
 {
-
 	if (params.size() < 1)
 	{
 		return false;
+
 	}
 
-	FillMode fillmnode = FillMode::WireFrame;
-
+	FillMode fillMode = FillMode::WireFrame;
 	if (params[0] == "wireframe")
 	{
-		fillmnode = FillMode::WireFrame;
+		fillMode = FillMode::WireFrame;
 	}
-
 	else if (params[0] == "solid")
 	{
-		fillmnode = FillMode::Solid;
+		fillMode = FillMode::Solid;
 	}
 	else
 	{
 		return false;
-	}
 
-	Rasterizer::Get()->SetFillMode(fillmnode);
+
+	}
+	Rasterizer::Get()->SetFillMode(fillMode);
 	return true;
 }

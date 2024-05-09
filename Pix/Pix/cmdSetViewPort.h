@@ -2,21 +2,20 @@
 
 #include "Command.h"
 
-class CmdSetViewPort : public Command
+class CmdSetViewport : public Command
 {
 public:
 	const char* GetName() override
 	{
-		return "SetViewPort";
+		return "SetViewport";
 	}
 
 	const char* GetDescription() override
 	{
 		return
-			"SetViewPort(x, y, width, height)\n"
+			"SetViewport( x, y, width, height)\n"
 			"\n"
-			"- Sets the viewing area.\n";
-
+			"-Sets the viewing area. \n";
 	}
 
 	bool Execute(const std::vector<std::string>& params) override;

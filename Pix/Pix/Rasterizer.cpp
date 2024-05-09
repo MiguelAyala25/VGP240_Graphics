@@ -121,7 +121,7 @@ void Rasterizer::DrawFilledTriangle(const Vertex& v0, const Vertex& v1, const Ve
 	float dy = v2.pos.y - v0.pos.y;
 	int startY = static_cast<int>(v0.pos.y);
 	int endY = static_cast<int>(v2.pos.y);
-	if (MatheHelper::checkEqual(v0.pos.y, v1.pos.y))
+	if (MathHelper::CheckEqual(v0.pos.y, v1.pos.y))
 	{
 		for (int y = startY; y <= endY; ++y )
 		{
@@ -131,7 +131,7 @@ void Rasterizer::DrawFilledTriangle(const Vertex& v0, const Vertex& v1, const Ve
 			DrawLine(a, b);
 		}
 	}
-	else if(MatheHelper::checkEqual(v1.pos.y, v2.pos.y))
+	else if(MathHelper::CheckEqual(v1.pos.y, v2.pos.y))
 	{
 		for (int y = startY; y <= endY; ++y)
 		{

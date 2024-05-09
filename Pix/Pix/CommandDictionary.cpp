@@ -38,8 +38,8 @@ CommandDictionary::CommandDictionary()
 	RegisterCommand<CmdEndDraw>();
 	RegisterCommand<CmdAddVertex>();
 	RegisterCommand<CmdSetFillMode>();
-	RegisterCommand<CmdSetViewPort>();
-	RegisterCommand<CmdShowtViewPort>();
+	RegisterCommand<CmdSetViewport>();
+	RegisterCommand<CmdShowViewport>();
 
 }
 

@@ -13,9 +13,9 @@ struct Vertex
 inline static Vector3 LerpPosition(const Vector3& a, const Vector3& b, float t)
 {
 	Vector3 pos;
-	pos.x = MatheHelper::Lerp(a.x, b.x,t);
-	pos.y = MatheHelper::Lerp(a.y, b.y, t);
-	pos.z = MatheHelper::Lerp(a.z, b.z, t);
+	pos.x = MathHelper::Lerp(a.x, b.x,t);
+	pos.y = MathHelper::Lerp(a.y, b.y, t);
+	pos.z = MathHelper::Lerp(a.z, b.z, t);
 	return pos;
 
 }
@@ -23,10 +23,10 @@ inline static Vector3 LerpPosition(const Vector3& a, const Vector3& b, float t)
 inline static X::Color LerpColor(const X::Color& a, const X::Color& b, float t)
 {
 	X::Color color;
-	color .r = MatheHelper::Lerp(a.r, b.r, t);
-	color.g = MatheHelper::Lerp(a.g, b.g, t);
-	color.b = MatheHelper::Lerp(a.b, b.b, t);
-	color.a = MatheHelper::Lerp(a.a, b.a, t);
+	color .r = MathHelper::Lerp(a.r, b.r, t);
+	color.g = MathHelper::Lerp(a.g, b.g, t);
+	color.b = MathHelper::Lerp(a.b, b.b, t);
+	color.a = MathHelper::Lerp(a.a, b.a, t);
 
 	return color;
 

@@ -6,17 +6,18 @@ class Clipper
 public:
 	static Clipper* Get();
 
-	~Clipper();
+public:
 	void OnNewFrame();
 
 	bool ClipPoint(const Vertex& v);
-	bool ClipLine(Vertex& v0, Vertex& v1);
+	bool ClipLine(Vertex& v1, Vertex& v2);
 	bool ClipTriangle(std::vector<Vertex>& vertices);
 
-	bool IsClipping() const { return mIsClipping; }
-	void setClipping(bool clip) { mIsClipping = clip; }
-
+	bool IsClipping() const { return mClipping; }
+	void SetClipping(bool clip) { mClipping = clip; }
 private:
+
 	Clipper();
-	bool mIsClipping = false;
+
+	bool mClipping = false;
 };

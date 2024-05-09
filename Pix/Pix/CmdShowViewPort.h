@@ -1,23 +1,20 @@
-
 #pragma once
-
 #include "Command.h"
 
-class CmdShowtViewPort : public Command
+class CmdShowViewport : public Command
 {
 public:
 	const char* GetName() override
 	{
-		return "ShowViewPort";
+		return "ShowViewport";
 	}
 
 	const char* GetDescription() override
 	{
 		return
-			"ShowViewPort(x, y, width, height)\n"
+			"ShowViewport( bool)\n"
 			"\n"
-			"- Sets the show area.\n";
-
+			"-Shows or hides the viewing area. \n";
 	}
 
 	bool Execute(const std::vector<std::string>& params) override;

@@ -1,16 +1,14 @@
-#include "cmdSetViewPort.h"
-# include "Viewport.h"
+#include "CmdSetViewport.h"
+#include "Viewport.h"
 #include "VariableCache.h"
 
-bool CmdSetViewPort::Execute(const std::vector<std::string>& params)
+bool CmdSetViewport::Execute(const std::vector<std::string>& params)
 {
 	if (params.size() < 4)
 	{
 		return false;
 	}
-
 	VariableCache* vc = VariableCache::Get();
-
 	float x = vc->GetFloat(params[0]);
 	float y = vc->GetFloat(params[1]);
 	float width = vc->GetFloat(params[2]);
@@ -19,5 +17,4 @@ bool CmdSetViewPort::Execute(const std::vector<std::string>& params)
 	Viewport::Get()->SetViewport(x, y, width, height);
 
 	return true;
-
 }
