@@ -16,7 +16,7 @@ public:
 public:
 	~PrimitivesManager();
 
-	bool BeguinDraw(Topology topology);
+	bool BeguinDraw(Topology topology, bool applyTransform = false);
 	void AddVertex(const Vertex& vertex);
 	bool EndDraw();
 
@@ -26,4 +26,5 @@ private:
 	std::vector<Vertex> mVertexBuffer;
 	Topology mTopology = Topology::Triangle;
 	bool mDrawBegin = false;
+	bool mApplyTransform = false;
 };

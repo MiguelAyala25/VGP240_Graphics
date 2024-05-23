@@ -1,6 +1,29 @@
 #include "PrimitiveManager.h"
 #include "Rasterizer.h"
 #include "Clipper.h"
+#include "Camera.h"
+#include "MatrixStack.h"
+
+
+extern float gResolutionX;
+extern float gResolutionY;
+
+namespace
+{
+	Matrix4 GetScreenMatrix()
+	{
+		float hw = gResolutionX * 0.5f;
+		float hh = gResolutionY * 0.5f;
+
+		return Matrix4(
+			hw, 0.0f, 0.0f, 0.0f,
+			0.0f, -hh, 0.0f, 0.0f,
+			0.0f, 0.0f, 1.0f, 0.0f,
+			hw, hh, 0.0f, 1.0f
+		);
+	}
+}
+
 
 PrimitivesManager::PrimitivesManager()
 {
@@ -13,8 +36,10 @@ PrimitivesManager* PrimitivesManager::Get()
 	static PrimitivesManager sInstance;
 	return &sInstance;
 }
-bool PrimitivesManager::BeguinDraw(Topology topology)
+bool PrimitivesManager::BeguinDraw(Topology topology, bool applyTransform)
 {
+	mApplyTransform = applyTransform;
+
 	mDrawBegin = true;
 	mTopology = topology;
 	mVertexBuffer.clear();
@@ -26,15 +51,35 @@ void PrimitivesManager::AddVertex(const Vertex& vertex)
 }
 bool PrimitivesManager::EndDraw()
 {
-	if (!mDrawBegin) return false;
+	if (!mDrawBegin)
+	{
+		return false;
+	}
+
+	if (mApplyTransform)
+	{
+		Matrix4 matWorld = MatrixStack::Get()->GetTransform();
+		Matrix4 matView = Camera::Get()->GetViewMatrix();
+		Matrix4 matProj = Camera::Get()->GetProjectionMatrix();
+		Matrix4 matScreen = GetScreenMatrix();
+		Matrix4 matNDC = matWorld * matView * matProj;
+		Matrix4 matFinal = matNDC * matScreen;
+
+		for (size_t i = 0; i < mVertexBuffer.size(); ++i)
+		{
+			Vector3 finalPos = MathHelper::TransformCoord(mVertexBuffer[i].pos, matFinal);
+			MathHelper::FlattenVector(finalPos);
+			mVertexBuffer[i].pos = finalPos;
+		}
+	}
+
 	switch (mTopology)
 	{
 	case Topology::Point:
 	{
-		for (size_t i = 0; i < mVertexBuffer.size(); ++i)
+		for (size_t i = 0; i < mVertexBuffer.size(); i++)
 		{
-			Rasterizer::Get()->DrawPoint(mVertexBuffer[i]);
-			if (Clipper::Get()->ClipPoint(mVertexBuffer[i]))
+			if (!Clipper::Get()->ClipPoint(mVertexBuffer[i]))
 			{
 				Rasterizer::Get()->DrawPoint(mVertexBuffer[i]);
 			}
@@ -44,22 +89,18 @@ bool PrimitivesManager::EndDraw()
 	case Topology::Line:
 	{
 		for (size_t i = 1; i < mVertexBuffer.size(); i += 2)
-		{
-			Rasterizer::Get()->DrawLine(mVertexBuffer[i - 1], mVertexBuffer[i]);
-			if (Clipper::Get()->ClipLine(mVertexBuffer[i - 1], mVertexBuffer[i]))
+			if (!Clipper::Get()->ClipLine(mVertexBuffer[i - 1], mVertexBuffer[i]))
 			{
 				Rasterizer::Get()->DrawLine(mVertexBuffer[i - 1], mVertexBuffer[i]);
 			}
-		}
 	}
 	break;
 	case Topology::Triangle:
 	{
 		for (size_t i = 2; i < mVertexBuffer.size(); i += 3)
 		{
-			Rasterizer::Get()->DrawTriangle(mVertexBuffer[i - 2], mVertexBuffer[i - 1], mVertexBuffer[i]);
 			std::vector<Vertex> triangle = { mVertexBuffer[i - 2], mVertexBuffer[i - 1], mVertexBuffer[i] };
-			if (Clipper::Get()->ClipTriangle(triangle))
+			if (!Clipper::Get()->ClipTriangle(triangle))
 			{
 				for (size_t t = 2; t < triangle.size(); ++t)
 				{
@@ -70,7 +111,7 @@ bool PrimitivesManager::EndDraw()
 	}
 	break;
 	default:
-		return false;
+		break;
 	}
 	mDrawBegin = false;
 	return true;
