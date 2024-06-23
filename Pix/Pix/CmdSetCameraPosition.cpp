@@ -2,7 +2,7 @@
 #include "VariableCache.h"
 #include "Camera.h"
 
-bool CmdSetCameraPosition::Execute(const std::vector<std::string>& params)
+bool CmdSetCameraPosition:: Execute(const std::vector<std::string>& params)
 {
 	if (params.size() < 3)
 	{

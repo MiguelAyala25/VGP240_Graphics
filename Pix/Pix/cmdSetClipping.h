@@ -1,5 +1,7 @@
 #pragma once
+
 #include "Command.h"
+
 class CmdSetClipping : public Command
 {
 public:
@@ -13,7 +15,7 @@ public:
 		return
 			"SetClipping(<clip>)\n"
 			"\n"
-			"- Sets Clipping\n";
+			"- Sets if clipping is enabled or not.";
 	}
 
 	bool Execute(const std::vector<std::string>& params) override;

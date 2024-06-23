@@ -54,6 +54,7 @@ void MatrixStack::PopMatrix()
 		Matrix4 matrix = mMatrices.back();
 		mMatrices.pop_back();
 
+		// To undo a matrix function, do the same thing but with inverse
 		mCombinedMatrix = MathHelper::Inverse(matrix) * mCombinedMatrix;
 	}
 }

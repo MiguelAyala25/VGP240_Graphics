@@ -13,7 +13,7 @@ public:
 	const char* GetDescription() override
 	{
 		return
-			"EndDraw()\n"
+			"EndDraw\n"
 			"\n"
 			"- sends vertices to rasterizer to render";
 	}

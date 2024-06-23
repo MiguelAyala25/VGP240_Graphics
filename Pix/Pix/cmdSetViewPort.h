@@ -13,9 +13,9 @@ public:
 	const char* GetDescription() override
 	{
 		return
-			"SetViewport( x, y, width, height)\n"
+			"SetViewport(x, y, width, height)\n"
 			"\n"
-			"-Sets the viewing area. \n";
+			"- Sets the viewing area.";
 	}
 
 	bool Execute(const std::vector<std::string>& params) override;

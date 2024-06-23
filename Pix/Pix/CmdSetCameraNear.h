@@ -14,10 +14,11 @@ public:
 	{
 		return
 			"SetCameraNear(near)\n"
-
+			
 			"\n"
 			"- add vertex to the primitives manager before render.";
 	}
 
 	bool Execute(const std::vector<std::string>& params) override;
 };
+#pragma once

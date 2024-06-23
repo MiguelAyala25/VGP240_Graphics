@@ -1,7 +1,7 @@
 D:\PeterStuff\X\Main\X\External\DirectXTK\Audio\Bin\Desktop_2019\x64\Debug\DirectXTKAudioWin8.lib
 D:\PeterStuff\X\Main\X\External\DirectXTK\Audio\Bin\Desktop_2019\x64\Debug\DirectXTKAudioWin8.pdb
-C:\Users\LCV2242930\Downloads\Pix\X\External\DirectXTK\Audio\Bin\Desktop_2019\x64\Debug\DirectXTKAudioWin8.lib
-C:\Users\LCV2242930\Downloads\VGP240\Pix\X\External\DirectXTK\Audio\Bin\Desktop_2019\x64\Debug\DirectXTKAudioWin8.lib
-C:\Users\LCV2242930\Downloads\VGP240_Graphics\Pix\X\External\DirectXTK\Audio\Bin\Desktop_2019\x64\Debug\DirectXTKAudioWin8.lib
-C:\Users\tlacu\Desktop\GameDev\School\C++\VGP240_Graphics\Pix\X\External\DirectXTK\Audio\Bin\Desktop_2019\x64\Debug\DirectXTKAudioWin8.lib
-C:\Users\LCV2242930\Documents\GitHub\VGP240_Graphics\Pix\X\External\DirectXTK\Audio\Bin\Desktop_2019\x64\Debug\DirectXTKAudioWin8.lib
+C:\Users\LCV2242922\Downloads\Pix\X\External\DirectXTK\Audio\Bin\Desktop_2019\x64\Debug\DirectXTKAudioWin8.lib
+C:\Users\LCV2242922\Source\Repos\3DGraphicsSp24\Pix\X\External\DirectXTK\Audio\Bin\Desktop_2019\x64\Debug\DirectXTKAudioWin8.lib
+C:\Users\pc\source\repos\Semester 6\3D Graphics And Application\Pix\Pix\X\External\DirectXTK\Audio\Bin\Desktop_2019\x64\Debug\DirectXTKAudioWin8.lib
+C:\Users\tlacu\OneDrive\Escritorio\VGP240_Graphics\Pix\X\External\DirectXTK\Audio\Bin\Desktop_2019\x64\Debug\DirectXTKAudioWin8.lib
+C:\Users\tlacu\OneDrive\Escritorio\alal\Pix\X\External\DirectXTK\Audio\Bin\Desktop_2019\x64\Debug\DirectXTKAudioWin8.lib

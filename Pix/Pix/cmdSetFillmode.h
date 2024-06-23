@@ -1,4 +1,5 @@
 #pragma once
+
 #include "Command.h"
 
 class CmdSetFillMode : public Command
@@ -12,9 +13,9 @@ public:
 	const char* GetDescription() override
 	{
 		return
-			"SetColor(<fillmode>)\n"
+			"SetFillMode(<fillMode>)\n"
 			"\n"
-			"-Sets the fillmode to read between vertices (wireframe and filled).";
+			"- Sets the fill mode to read the vertices (wireframe, filled).";
 	}
 
 	bool Execute(const std::vector<std::string>& params) override;

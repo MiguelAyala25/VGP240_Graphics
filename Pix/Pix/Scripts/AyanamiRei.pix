@@ -636,7 +636,3 @@ SetColor(0.549, 0, 0)
 DrawPixel(15,15)
 
 DrawPixel(18,15)
-
-
-
-

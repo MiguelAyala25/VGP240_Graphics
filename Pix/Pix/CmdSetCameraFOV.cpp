@@ -2,7 +2,7 @@
 #include "VariableCache.h"
 #include "Camera.h"
 
-bool CmdSetCameraFOV::Execute(const std::vector<std::string>& params)
+bool CmdSetCameraFOV:: Execute(const std::vector<std::string>& params)
 {
 	if (params.size() < 1)
 	{

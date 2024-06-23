@@ -8,6 +8,7 @@ bool CmdSetViewport::Execute(const std::vector<std::string>& params)
 	{
 		return false;
 	}
+
 	VariableCache* vc = VariableCache::Get();
 	float x = vc->GetFloat(params[0]);
 	float y = vc->GetFloat(params[1]);

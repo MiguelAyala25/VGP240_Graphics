@@ -4,6 +4,10 @@
 #include "Clipper.h"
 #include "Camera.h"
 #include "MatrixStack.h"
+#include "PrimitivesManager.h"
+#include "DepthBuffer.h"
+#include "LightManager.h"
+#include "MaterialManager.h"
 
 void Graphics::NewFrame()
 {
@@ -11,4 +15,8 @@ void Graphics::NewFrame()
 	Clipper::Get()->OnNewFrame();
 	Camera::Get()->OnNewFrame();
 	MatrixStack::Get()->OnNewFrame();
+	PrimitivesManager::Get()->OnNewFrame();
+	DepthBuffer::Get()->OnNewFrame();
+	LightManager::Get()->OnNewFrame();
+	MaterialManager::Get()->OnNewFrame();
 }

@@ -1,6 +1,6 @@
 #include "Camera.h"
 
-extern float gResolutionX;
+extern float gResolutionX;	// extern tells that there is a variable in another c++ file
 extern float gResolutionY;
 
 Camera* Camera::Get()
@@ -56,7 +56,7 @@ Matrix4 Camera::GetViewMatrix() const
 		r.x, u.x, l.x, 0.0f,
 		r.y, u.y, l.y, 0.0f,
 		r.z, u.z, l.z, 0.0f,
-		a, b, c, 1.0f
+		  a,   b,   c, 1.0f
 	);
 }
 
@@ -70,9 +70,9 @@ Matrix4 Camera::GetProjectionMatrix() const
 	const float q = zf / (zf - zn);
 
 	return Matrix4(
-		w, 0.0f, 0.0f, 0.0f,
-		0.0f, d, 0.0f, 0.0f,
-		0.0f, 0.0f, q, 1.0f,
+		   w, 0.0f,    0.0f, 0.0f,
+		0.0f,    d,    0.0f, 0.0f,
+		0.0f, 0.0f,       q, 1.0f,
 		0.0f, 0.0f, -zn * q, 0.0f
 	);
 }

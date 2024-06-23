@@ -13,12 +13,11 @@ public:
 	const char* GetDescription() override
 	{
 		return
-			"Begin draw(topology)\n"
+			"BeginDraw(topology)\n"
 			"\n"
-			"Begin draw"
-			"Stores topology";
+			"- begins draw.\n"
+			"- stores toplogy";
 	}
 
 	bool Execute(const std::vector<std::string>& params) override;
 };
-#pragma once

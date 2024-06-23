@@ -10,7 +10,7 @@ public:
 	void OnNewFrame();
 	void SetPosition(const Vector3& position);
 	void SetDirection(const Vector3& direction);
-	void SetNearPlane(float nearPlane);	
+	void SetNearPlane(float nearPlane);		// Make sure to not look directly up
 	void SetFarPlane(float farPlane);
 	void SetFOV(float fov);
 
